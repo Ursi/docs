@@ -1,0 +1,118 @@
+{
+	"name": "ElemStr",
+	"type": "class",
+	"constructor": {
+		"parameters": [
+			{
+				"name": "type",
+				"type": "String"
+			},
+			{
+				"name": "str",
+				"type": "String",
+				"default": ""
+			}
+		],
+		"description": "elemStr[i].textContent == str[i]\nelemStr[i].classList.contains('elem-char')\nelemStr[i].dataset.char == str[i]",
+		"returns": "an array of length str.length where each entry is a document.createElement(type)"
+	},
+	"instance": [
+		{
+			"name": "fragment",
+			"type": "documentFragment",
+			"description": "a `documentFragment` corresponding to the `HTMLElement`s in `elemStr`"
+		},
+		{
+			"name": "type",
+			"type": "String",
+			"description": "the type assigned when constructed"
+		},
+		{
+			"name": "append",
+			"type": "function",
+			"parameters": [
+				{
+					"name": "char",
+					"type": "String",
+					"description": "the text content of the `HTMLElement` that is going to be added to `elemStr`"
+				},
+				{
+					"name": "...classNames",
+					"type": "String",
+					"description": "the classes to be assigned to the `HTMLElement` this is going to be added to `elemStr`"
+				}
+			],
+			"description": "pushes an `HTMLElement` onto `elemStr`"
+		},
+		{
+			"name": "class",
+			"type": "function",
+			"parameters": [
+				{
+					"name": "className",
+					"type": "String"
+				}
+			],
+			"returns": "an array of the indecies of the entries of `elemStr` that have the class `className`"
+		},
+		{
+			"name": "firstClass",
+			"type": "function",
+			"parameters": [
+				{
+					"name": "className",
+					"type": "String"
+				}
+			],
+			"returns": "the first `HTMLElement` in `elemStr` that has the class `className`"
+		},
+		{
+			"name": "hasClass",
+			"type": "function",
+			"parameters": [
+				{
+					"name": "className",
+					"type": "String"
+				}
+			],
+			"returns": "`true` if any of the `HTMLElement`s in `elemStr` has the class `className`"
+		},
+		{
+			"name": "lastClass",
+			"type": "function",
+			"parameters": [
+				{
+					"name": "className",
+					"type": "String"
+				}
+			],
+			"returns": "the last `HTMLElement` in `elemStr` that has the class `className`"
+		},
+		{
+			"name": "sort",
+			"type": "function",
+			"parameters": [
+				{
+					"name": "func",
+					"type": "Function",
+					"default": "The default function for `Array.prototype.sort`",
+					"description": "uses the same conventions as custom function for `Array.prototype.sort`"
+				}
+			],
+			"description": "Sorts the `HTMLElement`s in `elemStr` based off of thier text content."
+		},
+		{
+			"name": "toString",
+			"type": "function",
+			"parameters": [],
+			"returns": "a string that is the concatination of the text contents of the `HTMLElement`s in `elemStr`"
+		}
+	],
+	"static": [
+		{
+			"name": "Symbol.species",
+			"type": "function",
+			"returns": "Array"
+		}
+	]
+}
