@@ -3,7 +3,7 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "Adds the `mathx` functions to `Math`"
+		"description": "adds the `mathx` functions to `Math`"
 	},
 	{
 		"name": "randInt",
