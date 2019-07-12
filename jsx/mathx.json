@@ -1,0 +1,31 @@
+[
+	{
+		"name": "buildIn",
+		"type": "function",
+		"parameters": [],
+		"description": "Adds the `mathx` functions to `Math`"
+	},
+	{
+		"name": "randInt",
+		"type": "function",
+		"parameters": [
+			{
+				"name": "lower"
+			},
+			{
+				"name": "upper"
+			}
+		],
+		"return": "a random integer between `upper` and `lower` inclusive"
+	},
+	{
+		"name": "randInt",
+		"type": "function",
+		"parameters": [
+			{
+				"name": "upper"
+			}
+		],
+		"return": "a randome integer between `0` and `upper - 1`"
+	}
+]
