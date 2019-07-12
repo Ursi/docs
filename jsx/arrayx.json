@@ -1,0 +1,54 @@
+[
+	{
+		"name": "buildIn",
+		"type": "function",
+		"parameters": [],
+		"description": "Adds the `mathx` functions to `Math`"
+	},
+	{
+		"prefix": "array",
+		"name": "propSort",
+		"type": "function",
+		"parameters": [
+			{
+				"name": "...params",
+				"grammar": [
+					[
+						"parameter",
+						"sort property | ( '[', sort property, ',', sort function, ']' )"
+					],
+					[
+						"sort property",
+						"property, [ '<' | '>' ]"
+					],
+					[
+						"property",
+						"? an object property ?"
+					],
+					[
+						"sort function",
+						"? a function for Array.prototype.sort ?"
+					]
+				],
+				"description": "If just a `sort property` is provied, the objects are sorted via the default sort function of `Array.prototype.sort`. `<` signifies a sort in the default direction and can be omitted unless `property` ends in `<`. `>` signfifies a sort in the oposite direction."
+			}
+		],
+		"description": "`propSort` is used to sort an array of obejcts based on their propery values. The objects are sorted according to the first `parameter`. For any object that has the same value for the `nth parameter`, the `n+1th parameter` is used to break that tie."
+	},
+	{
+		"prefix": "array",
+		"name": "randomRemove",
+		"type": "function",
+		"parameters": [],
+		"description": "removes a random element from `array`",
+		"returns": "the removed element"
+	},
+	{
+		"prefix": "array",
+		"name": "shuffle",
+		"type": "function",
+		"parameters": [],
+		"description": "shuffles `array` in place",
+		"returns": "`array`"
+	}
+]
