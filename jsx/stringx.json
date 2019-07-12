@@ -8,6 +8,7 @@
 	{
 		"prefix": "str",
 		"name": "toArray",
+		"type": "function",
 		"parameters": [],
 		"returns": "an array whose entries are the characters of `str`"
 	}

@@ -1,0 +1,20 @@
+[
+	{
+		"name": "buildIn",
+		"type": "function",
+		"parameters": [],
+		"description": "adds the `objectx` functions to `Object.prototype`"
+	},
+	{
+		"prefix": "obj",
+		"name": "getPath",
+		"type": "function",
+		"parameters": [
+			{
+				"name": "path",
+				"type": "Array"
+			}
+		],
+		"returns": "`obj[path[0]][path[1]]...[path[path.length - 1]]`"
+	}
+]
