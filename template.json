@@ -1,0 +1,17 @@
+{
+	"prefix": "an object that is used to call the entitiy",
+	"name": "the name of the entitity",
+	"type": "the data type of the entitiy",
+	"parameters": [
+		{
+			"name": "the name of the parameter",
+			"type": "the data type of the parameter",
+			"grammer": "an array of [meta-identifier, definition-list] (ISO/IEC 14977)",
+			"default": "the default value of the parameter",
+			"description": "a description of the parameter",
+			"parameters": "an array of parameters used to represent an options object with deafults"
+		}
+	],
+	"description": "description of the entitiy",
+	"returns": "the return value of the entitity if it returns"
+}
