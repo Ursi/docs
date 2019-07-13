@@ -30,6 +30,7 @@
 						"? a function for Array.prototype.sort ?"
 					]
 				],
+				"default": "0, 1, ..., array[0].length - 1",
 				"description": "If just a `sort property` is provied, the objects are sorted via the default sort function of `Array.prototype.sort`. `<` signifies a sort in the default direction and can be omitted unless `property` ends in `<`. `>` signfifies a sort in the oposite direction."
 			}
 		],
