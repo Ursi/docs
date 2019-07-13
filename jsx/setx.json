@@ -1,0 +1,15 @@
+[
+	{
+		"name": "buildIn",
+		"type": "function",
+		"parameters": [],
+		"description": "adds the `setx` functions to `Set.prototype`"
+	},
+	{
+		"prefix": "set",
+		"name": "toArray",
+		"type": "function",
+		"parameters": [],
+		"returns": "`set`'s values in an array"
+	}
+]
