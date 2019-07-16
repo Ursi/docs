@@ -4,16 +4,5 @@
 		"type": "function",
 		"parameters": [],
 		"description": "adds all the `jsx` functions to the global obejct, as well as calling `buildIn` for each of the more specific modules."
-	},
-	{
-		"name": "transWait",
-		"type": "function",
-		"parameters": [
-			{
-				"name": "elem",
-				"type": "HTMLElement"
-			}
-		],
-		"returns": "a promise that resolves when `elem` emits a `transitionend` event"
 	}
 ]

@@ -1,0 +1,13 @@
+[
+	{
+		"name": "transWait",
+		"type": "function",
+		"parameters": [
+			{
+				"name": "elem",
+				"type": "HTMLElement"
+			}
+		],
+		"returns": "a promise that resolves when `elem` emits a `transitionend` event"
+	}
+]
