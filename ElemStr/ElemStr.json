@@ -20,7 +20,7 @@
 		{
 			"name": "fragment",
 			"type": "documentFragment",
-			"description": "a `documentFragment` corresponding to the `HTMLElement`s in `elemStr`"
+			"description": "a <code>documentFragment</code> corresponding to the <code>HTMLElement</code>s in <code>elemStr</code>"
 		},
 		{
 			"name": "type",
@@ -34,15 +34,15 @@
 				{
 					"name": "char",
 					"type": "String",
-					"description": "the text content of the `HTMLElement` that is going to be added to `elemStr`"
+					"description": "the text content of the <code>HTMLElement</code> that is going to be added to <code>elemStr</code>"
 				},
 				{
 					"name": "...classNames",
 					"type": "String",
-					"description": "the classes to be assigned to the `HTMLElement` this is going to be added to `elemStr`"
+					"description": "the classes to be assigned to the <code>HTMLElement</code> this is going to be added to <code>elemStr</code>"
 				}
 			],
-			"description": "pushes an `HTMLElement` onto `elemStr`"
+			"description": "pushes an <code>HTMLElement</code> onto <code>elemStr</code>"
 		},
 		{
 			"name": "class",
@@ -53,7 +53,7 @@
 					"type": "String"
 				}
 			],
-			"returns": "an array of the indecies of the entries of `elemStr` that have the class `className`"
+			"returns": "an array of the indecies of the entries of <code>elemStr</code> that have the class <code>className</code>"
 		},
 		{
 			"name": "firstClass",
@@ -64,7 +64,7 @@
 					"type": "String"
 				}
 			],
-			"returns": "the first `HTMLElement` in `elemStr` that has the class `className`"
+			"returns": "the first <code>HTMLElement</code> in <code>elemStr</code> that has the class <code>className</code>"
 		},
 		{
 			"name": "hasClass",
@@ -75,7 +75,7 @@
 					"type": "String"
 				}
 			],
-			"returns": "`true` if any of the `HTMLElement`s in `elemStr` has the class `className`"
+			"returns": "<code>true</code> if any of the <code>HTMLElement</code>s in <code>elemStr</code> has the class <code>className</code>"
 		},
 		{
 			"name": "lastClass",
@@ -86,7 +86,7 @@
 					"type": "String"
 				}
 			],
-			"returns": "the last `HTMLElement` in `elemStr` that has the class `className`"
+			"returns": "the last <code>HTMLElement</code> in <code>elemStr</code> that has the class <code>className</code>"
 		},
 		{
 			"name": "sort",
@@ -95,17 +95,17 @@
 				{
 					"name": "func",
 					"type": "Function",
-					"default": "The default function for `Array.prototype.sort`",
-					"description": "uses the same conventions as custom function for `Array.prototype.sort`"
+					"default": "The default function for <code>Array.prototype.sort</code>",
+					"description": "uses the same conventions as custom function for <code>Array.prototype.sort</code>"
 				}
 			],
-			"description": "Sorts the `HTMLElement`s in `elemStr` based off of thier text content."
+			"description": "Sorts the <code>HTMLElement</code>s in <code>elemStr</code> based off of thier text content."
 		},
 		{
 			"name": "toString",
 			"type": "function",
 			"parameters": [],
-			"returns": "a string that is the concatination of the text contents of the `HTMLElement`s in `elemStr`"
+			"returns": "a string that is the concatination of the text contents of the <code>HTMLElement</code>s in <code>elemStr</code>"
 		}
 	],
 	"static": [

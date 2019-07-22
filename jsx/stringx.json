@@ -3,13 +3,13 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "adds the `stringx` functions to `String.prototype`"
+		"description": "adds the <code>stringx</code> functions to <code>String.prototype</code>"
 	},
 	{
 		"prefix": "str",
 		"name": "toArray",
 		"type": "function",
 		"parameters": [],
-		"returns": "an array whose entries are the characters of `str`"
+		"returns": "an array whose entries are the characters of <code>str</code>"
 	}
 ]

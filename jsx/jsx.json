@@ -3,6 +3,6 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "adds all the `jsx` functions to the global obejct, as well as calling `buildIn` for each of the more specific modules."
+		"description": "adds all the <code>jsx</code> functions to the global obejct, as well as calling <code>buildIn</code> for each of the more specific modules."
 	}
 ]

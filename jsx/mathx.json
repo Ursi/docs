@@ -3,7 +3,7 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "adds the `mathx` functions to `Math`"
+		"description": "adds the <code>mathx</code> functions to <code>Math</code>"
 	},
 	{
 		"name": "randInt",
@@ -16,7 +16,7 @@
 				"name": "upper"
 			}
 		],
-		"return": "a random integer between `upper` and `lower` inclusive"
+		"return": "a random integer between <code>upper</code> and <code>lower</code> inclusive"
 	},
 	{
 		"name": "randInt",
@@ -26,6 +26,6 @@
 				"name": "upper"
 			}
 		],
-		"return": "a randome integer between `0` and `upper - 1`"
+		"return": "a randome integer between 0 and <code>upper - 1</code>"
 	}
 ]

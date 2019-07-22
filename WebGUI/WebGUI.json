@@ -8,6 +8,6 @@
 				"type": "HTMLElement"
 			}
 		],
-		"returns": "a promise that resolves when `elem` emits a `transitionend` event"
+		"returns": "a promise that resolves when <code>elem</code> emits a <code>transitionend</code> event"
 	}
 ]

@@ -3,7 +3,7 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "adds the `mathx` functions to `Math`"
+		"description": "adds the <code>mathx</code> functions to <code>Math</code>"
 	},
 	{
 		"prefix": "array",
@@ -31,17 +31,17 @@
 					]
 				],
 				"default": "0, 1, ..., array[0].length - 1",
-				"description": "If just a `sort property` is provied, the objects are sorted via the default sort function of `Array.prototype.sort`. `<` signifies a sort in the default direction and can be omitted unless `property` ends in `<`. `>` signfifies a sort in the oposite direction."
+				"description": "If just a <code>sort property</code> is provied, the objects are sorted via the default sort function of <code>Array.prototype.sort</code>. <code><</code> signifies a sort in the default direction and can be omitted unless <code>property</code> ends in <code><</code>. <code>></code> signfifies a sort in the oposite direction."
 			}
 		],
-		"description": "`propSort` is used to sort an array of obejcts based on their propery values. The objects are sorted according to the first `parameter`. For any object that has the same value for the `nth parameter`, the `n+1th parameter` is used to break that tie."
+		"description": "<code>propSort</code> is used to sort an array of obejcts based on their propery values. The objects are sorted according to the first <code>parameter</code>. For any object that has the same value for the <code>nth parameter</code>, the <code>n+1th parameter</code> is used to break that tie."
 	},
 	{
 		"prefix": "array",
 		"name": "randomRemove",
 		"type": "function",
 		"parameters": [],
-		"description": "removes a random element from `array`",
+		"description": "removes a random element from <code>array</code>",
 		"returns": "the removed element"
 	},
 	{
@@ -49,7 +49,7 @@
 		"name": "shuffle",
 		"type": "function",
 		"parameters": [],
-		"description": "shuffles `array` in place",
-		"returns": "`array`"
+		"description": "shuffles <code>array</code> in place",
+		"returns": "<code>array</code>"
 	}
 ]

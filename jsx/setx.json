@@ -3,13 +3,13 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "adds the `setx` functions to `Set.prototype`"
+		"description": "adds the <code>setx</code> functions to <code>Set.prototype</code>"
 	},
 	{
 		"prefix": "set",
 		"name": "toArray",
 		"type": "function",
 		"parameters": [],
-		"returns": "`set`'s values in an array"
+		"returns": "<code>set</code>'s values in an array"
 	}
 ]

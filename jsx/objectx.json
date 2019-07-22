@@ -3,7 +3,7 @@
 		"name": "buildIn",
 		"type": "function",
 		"parameters": [],
-		"description": "adds the `objectx` functions to `Object.prototype`"
+		"description": "adds the <code>objectx</code> functions to <code>Object.prototype</code>"
 	},
 	{
 		"prefix": "obj",
@@ -15,6 +15,6 @@
 				"type": "Array"
 			}
 		],
-		"returns": "`obj[path[0]][path[1]]...[path[path.length - 1]]`"
+		"returns": "<code>obj[path[0]][path[1]]...[path[path.length - 1]]</code>"
 	}
 ]
