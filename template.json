@@ -6,8 +6,11 @@
 		"parameters": [
 			{
 				"name": "the name of the parameter",
-				"type": "the data type of the parameter",
-				"grammer": "an array of [meta-identifier, definition-list] (ISO/IEC 14977)",
+				"type": "the data type of the parameter or an array of possible data types",
+				"grammar": {
+						"def": "something to show what metasyntax is being used",
+						"rules": "an array of [name, definition]"
+					},
 				"default": "the default value of the parameter",
 				"description": "a description of the parameter",
 				"parameters": "an array of parameters used to represent an options object with deafults"
