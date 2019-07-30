@@ -4,3 +4,4 @@ brackettree
 httpq
 jsondb
 templates
+speedtest
