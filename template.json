@@ -17,7 +17,8 @@
 			}
 		],
 		"description": "description of the entitiy",
-		"returns": "the return value of the entitity if it returns"
+		"returns": "the return value of the entitity if it returns",
+		"deprecated": "true or false/omitted"
 	},
 	"class": {
 		"name": "class name",
