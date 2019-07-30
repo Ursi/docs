@@ -3,3 +3,4 @@ webhk
 brackettree
 httpq
 jsondb
+templates
