@@ -1,0 +1,7 @@
+<p><code>pug-client.js</code> uses <a href='https://pugjs.org/api/getting-started.html'>Pug's</a> <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options'><code>compileClient</code></a> module to fuse together multiple Pug templates into a single function that can be used on the client.</p>
+
+<p><code>pug-client.js</code> must be run in an environment where <code>require('pug')</code> will work.</p>
+
+<p>When <code>pug-client.js</code> is run, it checks to see if a <code>config.json</code> file exists in its directory. If it doesn't, it creates one, as well as creating a direcotry named <code>src</code>.</p>
+
+<p><code>watcher.js</code> monitors changes in the <code>pug source directory</code> and updates the client function file accordingly.</p>

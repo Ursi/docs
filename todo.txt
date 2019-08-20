@@ -5,5 +5,3 @@ jsondb
 templates
 speedtest
 requirfy
-pug-client
-jsx

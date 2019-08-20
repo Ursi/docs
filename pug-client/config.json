@@ -1,0 +1,17 @@
+[
+	{
+		"name": "pug source directory",
+		"type": "String",
+		"description": "the directory where the <code>pug-client.js</code> looks for Pug templates"
+	},
+	{
+		"name": "function name",
+		"type": "String",
+		"description": "This name plus <code>.js</code> will be the name of the script <code>pug-client.js</code> creates when run. Embedding this script into your HTML document will introduce a function with this name into the global scope and allow you to use the <code>.pug</code> files stored in the <code>pug source directory</code>."
+	},
+	{
+		"name": "options",
+		"type": "Object",
+		"description": "the default <a href='https://pugjs.org/api/reference.html#options'>options</a> for Pug's <code>compileClient</code> module."
+	}
+]
