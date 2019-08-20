@@ -2,6 +2,5 @@ stringx
 webhk
 brackettree
 jsondb
-templates
-speedtest
-requirfy
+customs
+speedtest (might be pointless because of jsperf)
