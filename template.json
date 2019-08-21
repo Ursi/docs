@@ -22,6 +22,7 @@
 	},
 	"class": {
 		"name": "class name",
+		"extends": "class name of the class this class extends"
 		"constructor": "An entity for the constructor. Prefix and type can be omitted",
 		"instance": "An array of entities corresponding the properties of a class instance. Prefix can be omitted",
 		"static": "An array of entities corresponding to the static methods of the class. Prefix can be omitted"
