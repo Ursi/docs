@@ -26,5 +26,18 @@
 		"constructor": "An entity for the constructor. Prefix and type can be omitted",
 		"instance": "An array of entities corresponding the properties of a class instance. Prefix can be omitted",
 		"static": "An array of entities corresponding to the static methods of the class. Prefix can be omitted"
+	},
+	"html element": {
+		"name": "name of the element",
+		"description": "description of the element",
+		"attributes": [
+			{
+				"name": "name of the attribute",
+				"boolean": "true or false/omitted",
+				"description": "description of the attribute",
+				"deprecated": "true or false/omitted"
+			}
+		],
+		"deprecated": "true or false/omitted"
 	}
 }
