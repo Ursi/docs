@@ -38,6 +38,14 @@
 				"deprecated": "true or false/omitted"
 			}
 		],
+		"style": [
+			{
+				"selector": "CSS selector",
+				"declarations": [
+					["property", "value"]
+				]
+			}
+		],
 		"deprecated": "true or false/omitted"
 	}
 }
