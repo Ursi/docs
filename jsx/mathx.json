@@ -1,13 +1,13 @@
 [
 	{
 		"name": "buildIn",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "adds the <code>mathx</code> functions to <code>Math</code>"
 	},
 	{
 		"name": "randInt",
-		"type": "function",
+		"type": "Function",
 		"parameters": [
 			{
 				"name": "lower"
@@ -20,7 +20,7 @@
 	},
 	{
 		"name": "randInt",
-		"type": "function",
+		"type": "Function",
 		"parameters": [
 			{
 				"name": "upper"

@@ -1,14 +1,14 @@
 [
 	{
 		"name": "buildIn",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "adds the <code>stringx</code> functions to <code>String.prototype</code>"
 	},
 	{
 		"prefix": "str",
 		"name": "toArray",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"returns": "an array whose entries are the characters of <code>str</code>"
 	}

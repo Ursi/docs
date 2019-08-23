@@ -1,14 +1,14 @@
 [
 	{
 		"name": "buildIn",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "adds the <code>mathx</code> functions to <code>Math</code>"
 	},
 	{
 		"prefix": "array",
 		"name": "propSort",
-		"type": "function",
+		"type": "Function",
 		"parameters": [
 			{
 				"name": "...params",
@@ -39,7 +39,7 @@
 	{
 		"prefix": "array",
 		"name": "randomRemove",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "removes a random element from <code>array</code>",
 		"returns": "the removed element"
@@ -47,7 +47,7 @@
 	{
 		"prefix": "array",
 		"name": "shuffle",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "shuffles <code>array</code> in place",
 		"returns": "<code>array</code>"

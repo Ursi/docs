@@ -1,14 +1,14 @@
 [
 	{
 		"name": "buildIn",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "adds the <code>setx</code> functions to <code>Set.prototype</code>"
 	},
 	{
 		"prefix": "set",
 		"name": "toArray",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"returns": "<code>set</code>'s values in an array"
 	}

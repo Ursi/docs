@@ -1,14 +1,14 @@
 [
 	{
 		"name": "buildIn",
-		"type": "function",
+		"type": "Function",
 		"parameters": [],
 		"description": "adds the <code>objectx</code> functions to <code>Object.prototype</code>"
 	},
 	{
 		"prefix": "obj",
 		"name": "getPath",
-		"type": "function",
+		"type": "Function",
 		"parameters": [
 			{
 				"name": "path",
