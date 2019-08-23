@@ -2,5 +2,4 @@ stringx
 webhk
 brackettree
 jsondb
-customs
 speedtest (might be pointless because of jsperf)

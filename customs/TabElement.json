@@ -1,0 +1,36 @@
+{
+    "name": "TabElement",
+    "extends": "HTMLElement",
+    "instance": [
+        {
+            "name": "contents",
+            "type": "String",
+            "description": "gets or sets the <code>contents</code> attribute of <code>tabElement</code>"
+        },
+        [
+            {
+                "prefix": "group",
+                "name": "name",
+                "type": "String",
+                "description": "gets or sets the <code>group</code> attribute of <code>tabElement</code>"
+            },
+            {
+                "prefix": "group",
+                "name": "tabs",
+                "type": "Array",
+                "returns": "an array of all the <code>tab-select</code>s in the document that are part of same group as <code>tabElement</code>"
+            },
+            {
+                "prefix": "group",
+                "name": "content",
+                "type": "Array",
+                "returns": "an array of all the <code>tab-content</code>s in the document that are part of the same group as <code>tabElement</code>"
+            }
+        ],
+        {
+            "name": "selected",
+            "type": "Boolean",
+            "description": "gets or sets the <code>selected</code> boolean attribute from <code>tabElement</code>"
+        }
+    ]
+}

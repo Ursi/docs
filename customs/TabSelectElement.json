@@ -1,0 +1,16 @@
+{
+    "name": "TabSelectElement",
+    "extends": "TabElement",
+    "instance": [
+        {
+            "name": "contentElements",
+            "type": "Array",
+            "returns": "an array of all the <code>tab-content</code>s in the document whose <code>content</code> attribute is the same as <code>tab-select</code>"
+        },
+        {
+            "name": "select",
+            "type": "Function",
+            "description": "the same as clicking the <code>tab-select</code> element"
+        }
+    ]
+}

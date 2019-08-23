@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Tab Elements",
+        "description": "<p>The tab elements are used for creating tab-like structures in web pages. There are three tab elements, <code>tab-group</code>, <code>tab-select</code>, and <code>tab-content</code>. <code>tab-select</code> and <code>tab-content</code> are grouped together via a <code>tag-group</code> element or their <code>group</code> attribute.</p>",
+        "tags": [
+            {
+                "name": "tab-group",
+                "attributes": [
+                    {
+                        "name": "group",
+                        "description": "All <code>tab-select</code> and <code>tab-content</code> elements without their own group attribute that are children of a <code>tab-group</code> will use the <code>group</code> attribute of said <code>tag-group</code>."
+                    }
+                ],
+                "style": [
+                    {
+                        "selector": "tag-group",
+                        "descriptors": [
+                            ["display", "contents"]
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "tab-select",
+                "description": "When clicked, the <code>selected</code> attribute is removed from every <code>tab-select</code> and <code>tab-content</code> element in the tab group, and then placed onto every <code>tab-select</code> and <code>tab-content</code> in the tab group whose <code>content</code> attribute matches the content attribute of the clicked <code>tab-select</code>",
+                "attributes": [
+                    {
+                        "name": "group",
+                        "description": "the tab group the <code>tab-select</code> belongs to"
+                    },
+                    {
+                        "name": "content",
+                        "description": "the content that the <code>tab-select</code> element is linked to"
+                    },
+                    {
+                        "name": "selected",
+                        "boolean": "true"
+                    }
+                ]
+            },
+            {
+                "name": "tab-content",
+                "attributes": [
+                    {
+                        "name": "group",
+                        "description": "the tab group the <code>tab-select</code> belongs to"
+                    },
+                    {
+                        "name": "content",
+                        "description": "the content that the <code>tab-select</code> element is linked to"
+                    },
+                    {
+                        "name": "selected",
+                        "boolean": "true"
+                    }
+                ],
+                "style": [
+                    {
+                        "selector": "tag-content:not([selected])",
+                        "descriptors": [
+                            ["display", "none"]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
