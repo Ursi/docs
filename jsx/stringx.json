@@ -1,15 +1,34 @@
 [
 	{
+		"prefix": "stringx",
 		"name": "buildIn",
 		"type": "Function",
 		"parameters": [],
-		"description": "adds the <code>stringx</code> functions to <code>String.prototype</code>"
+		"description": "adds the <code>stringx</code> functions to <code>String.prototype</code> and the <code>stringx.String</code> functions to <code>String</code>"
 	},
 	{
-		"prefix": "str",
-		"name": "toArray",
+		"prefix": "string",
+		"name": "toReString",
 		"type": "Function",
-		"parameters": [],
-		"returns": "an array whose entries are the characters of <code>str</code>"
+		"parameters": [
+			{
+				"name": "regExp",
+				"type": "Boolean",
+				"default": "false",
+				"description": "weather or not the return value is a regular expression object or a string"
+			}
+		],
+		"returns": "a string <code>s</code> or regExp object <code>r</code> such that <code>RegExp(s)</code> or <code>r</code> matches <code>string</code> exactly"
+	},
+	{
+		"prefix": "String",
+		"name": "ii",
+		"type": "Function",
+		"parameters": [
+			{
+				"name": "string",
+				"type": "String",
+			}
+		]
 	}
 ]
