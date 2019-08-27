@@ -32,6 +32,11 @@
                         "name": "content",
                         "description": "the content that the <code>tab-select</code> element is linked to"
                     },
+					{
+						"name": "default",
+						"boolean": "true",
+						"description": "this <code>tab-content</code> will be selected when the page loads."
+					},
                     {
                         "name": "selected",
                         "boolean": "true"
