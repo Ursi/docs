@@ -1,19 +1,19 @@
 [
     {
         "name": "Tab Elements",
-        "description": "<p>The tab elements are used for creating tab-like structures in web pages. There are three tab elements, <code>tab-group</code>, <code>tab-select</code>, and <code>tab-content</code>. <code>tab-select</code> and <code>tab-content</code> are grouped together via a <code>tag-group</code> element or their <code>group</code> attribute.</p>",
-        "tags": [
+        "description": "<p>The tab elements are used for creating tab-like structures in web pages. There are three tab elements, <code>tab-group</code>, <code>tab-select</code>, and <code>tab-content</code>. <code>tab-select</code> and <code>tab-content</code> are grouped together via a <code>tab-group</code> element or their <code>group</code> attribute.</p>",
+        "elements": [
             {
                 "name": "tab-group",
                 "attributes": [
                     {
                         "name": "group",
-                        "description": "All <code>tab-select</code> and <code>tab-content</code> elements without their own group attribute that are children of a <code>tab-group</code> will use the <code>group</code> attribute of said <code>tag-group</code>."
+                        "description": "All <code>tab-select</code> and <code>tab-content</code> elements without their own group attribute that are children of a <code>tab-group</code> will use the <code>group</code> attribute of said <code>tab-group</code>."
                     }
                 ],
                 "style": [
                     {
-                        "selector": "tag-group",
+                        "selector": "tab-group",
                         "descriptors": [
                             ["display", "contents"]
                         ]
@@ -36,7 +36,15 @@
                         "name": "selected",
                         "boolean": "true"
                     }
-                ]
+                ],
+				"style": [
+					{
+						"selector": "tab-select",
+						"descriptors": [
+							["cursor", "default"]
+						]
+					}
+				]
             },
             {
                 "name": "tab-content",
@@ -56,7 +64,7 @@
                 ],
                 "style": [
                     {
-                        "selector": "tag-content:not([selected])",
+                        "selector": "tab-content:not([selected])",
                         "descriptors": [
                             ["display", "none"]
                         ]
