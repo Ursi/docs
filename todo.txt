@@ -3,3 +3,4 @@ webhk
 brackettree
 jsondb
 speedtest (might be pointless because of jsperf)
+httpq
