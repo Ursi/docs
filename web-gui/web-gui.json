@@ -1,7 +1,100 @@
 [
 	{
+		"name": "empty",
+		"type": "Function",
+		"parameters": [
+			{
+				"name": "elem",
+				"type": "HTMLElement"
+			}
+		],
+		"description": "removes all the children of <code>elem</code>"
+	},
+	{
+		"name": "popup",
+		"type": "Function",
+		"parameters": [
+			{
+				"name": "elem",
+				"type": "HTMLElement",
+				"description": "The element that will be popped up"
+			},
+			{
+				"name": "options",
+				"type": "Object",
+				"parameters": [
+					{
+						"name": "reference",
+						"type": "HTMLElement",
+						"description": "an element used for positioning the popup, by default the viewport is used"
+					},
+					{
+						"name": "xe",
+						"type": "Number",
+						"default": .5,
+						"description": "a value from 0 to 1, (0 being the rightmost side of the element/viewport and 1 being the leftmost side) that is matched up with the x value specified by <code>xr</code>"
+					},
+					{
+						"name": "xr",
+						"type": "Number",
+						"default": .5,
+						"description": "a value from 0 to 1, (0 being the rightmost side of the element/viewport and 1 being the leftmost side) that is matched up with the x value specified by <code>xe</code>"
+					},
+					{
+						"name": "ye",
+						"type": "Number",
+						"default": .5,
+						"description": "a value from 0 to 1, (0 being the topmost side of the element/viewport and 1 being the bottommost side) that is matched up with the y value specified by <code>yr</code>"
+					},
+					{
+						"name": "yr",
+						"type": "Number",
+						"default": .5,
+						"description": "a value from 0 to 1, (0 being the topmost side of the element/viewport and 1 being the bottommost side) that is matched up with the y value specified by <code>ye</code>"
+					},
+					{
+						"name": "dim",
+						"type": "Number",
+						"default": 85,
+						"description": "the opacity of the black background from 0–255"
+					},
+					{
+						"name": "boxShadow",
+						"type": "String",
+						"default": "0 0 10px",
+						"description": "the value of the CSS <code>box-shadow</code> property of the popup"
+					},
+					{
+						"name": "zIndex",
+						"type": "Number",
+						"default": "Number.MAX_SAFE_INTEGER",
+						"description": "the value of the CSS <code>z-index</code> property"
+					}
+				]
+			},
+			{
+				"name": "callback",
+				"type": "Function",
+				"default": null,
+				"description": "a callback to be executed when the popup is closed via clicking outside of it",
+				"parameters": [
+					{
+						"name": "elem",
+						"type": "HTMLElement",
+						"description": "the <code>elem</code> parameter passed into <code>popup</code>"
+					},
+					{
+						"name": "options",
+						"type": "Object",
+						"description": "the <code>options</code> parameter passed into <code>popup</code>"
+					}
+				]
+			}
+		]
+	},
+	{
 		"name": "transWait",
-		"type": "function",
+		"type": "Function",
 		"parameters": [
 			{
 				"name": "elem",
