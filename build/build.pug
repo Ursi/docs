@@ -24,7 +24,13 @@ html
 						mixin nameAndType(param)
 							code.param-name= param.name
 							| : 
-							code.param-type= param.type
+							code.js-value= param.type
+							|  
+							if `default` in param
+								-
+									let defaultValue = ``;
+									if (param.default) defaultValue = `(default: <code class='js-value'>${param.default}</code>)`;
+								span.default!= defaultValue
 						for param in entity.parameters
 							li
 								+nameAndType(param)

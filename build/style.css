@@ -13,7 +13,7 @@ ol {
 	border-radius: 3px;
 }
 
-.param-type {
+.js-value {
 	color: red;
 }
 
@@ -23,4 +23,8 @@ p {
 
 .returns {
 	text-decoration: underline;
+}
+
+.default {
+	color: #0009;
 }
