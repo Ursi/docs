@@ -2,7 +2,7 @@
 	{
 		"name": "get",
 		"type": "Function",
-		"description": "<code>httpq.get</code> takes in the same parameters as Node.js's <code>http.get</code>, however, it accepts both <code>http</code> and <code>https</code>",
+		"description": "<code>httpq.get</code> takes in the same parameters as Node.js's <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_get_options_callback' target='blank'><code>http.get</code></a>, however, it accepts both <code>http</code> and <code>https</code>",
 		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
 	},
 	{
