@@ -1,13 +1,13 @@
 [
 	{
 		"name": "get",
-		"type": "function",
+		"type": "Function",
 		"description": "<code>httpq.get</code> takes in the same parameters as Node.js's <code>http.get</code>, however, it accepts both <code>http</code> and <code>https</code>",
 		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
 	},
 	{
 		"name": "getRaw",
-		"type": "function",
+		"type": "Function",
 		"description": "same as <code>httpq.get</code> except the promise resolves to a <code>Buffer</code>",
 		"returns": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
 	},
@@ -23,23 +23,23 @@
 	},
 	{
 		"name": "post",
-		"type": "function",
+		"type": "Function",
 		"description": "<code>httpq.post</code> takes in the same parameters as Node.js's <code>http.post</code>, however, it accepts both <code>http</code> and <code>https</code>",
 		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
 	},
 	{
 		"name": "postRaw",
-		"type": "function",
+		"type": "Function",
 		"description": "same as <code>httpq.post</code> except the promise resolves to a <code>Buffer</code>",
 		"returns": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
 	},
 	{
 		"name": "request",
-		"type": "function",
+		"type": "Function",
 		"parameters": [
 			{
 				"name": "reqFunc",
-				"type": "function",
+				"type": "Function",
 				"description": "a function that is passed the <code>http.ClientRequest</code> created by a call to <code>http(s).request(...params)"
 			},
 			{
