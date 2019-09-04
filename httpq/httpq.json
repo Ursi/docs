@@ -1,46 +1,39 @@
 [
 	{
-		"prefix": "httpq",
 		"name": "get",
 		"type": "function",
 		"description": "<code>httpq.get</code> takes in the same parameters as Node.js's <code>http.get</code>, however, it accepts both <code>http</code> and <code>https</code>",
 		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
 	},
 	{
-		"prefix": "httpq",
 		"name": "getRaw",
 		"type": "function",
 		"description": "same as <code>httpq.get</code> except the promise resolves to a <code>Buffer</code>",
 		"returns": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
 	},
 	{
-		"prefix": "httpq",
 		"name": "http",
 		"type": "module",
 		"description": "Node.js's <code>http</code> module"
 	},
 	{
-		"prefix": "httpq",
 		"name": "https",
 		"type": "module",
 		"description": "Node.js's <code>https</code> module"
 	},
 	{
-		"prefix": "httpq",
 		"name": "post",
 		"type": "function",
 		"description": "<code>httpq.post</code> takes in the same parameters as Node.js's <code>http.post</code>, however, it accepts both <code>http</code> and <code>https</code>",
 		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
 	},
 	{
-		"prefix": "httpq",
 		"name": "postRaw",
 		"type": "function",
 		"description": "same as <code>httpq.post</code> except the promise resolves to a <code>Buffer</code>",
 		"returns": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
 	},
 	{
-		"prefix": "httpq",
 		"name": "request",
 		"type": "function",
 		"parameters": [
