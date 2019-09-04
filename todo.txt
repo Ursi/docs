@@ -5,4 +5,4 @@ jsondb
 speedtest (might be pointless because of jsperf)
 httpq
 arrayx grammar
-web-gui
+httpq (http.post doesn't exist ?)
