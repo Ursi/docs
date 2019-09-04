@@ -31,25 +31,25 @@
 					{
 						"name": "xe",
 						"type": "Number",
-						"default": .5,
+						"default": 0.5,
 						"description": "a value from 0 to 1, (0 being the rightmost side of the element/viewport and 1 being the leftmost side) that is matched up with the x value specified by <code>xr</code>"
 					},
 					{
 						"name": "xr",
 						"type": "Number",
-						"default": .5,
+						"default": 0.5,
 						"description": "a value from 0 to 1, (0 being the rightmost side of the element/viewport and 1 being the leftmost side) that is matched up with the x value specified by <code>xe</code>"
 					},
 					{
 						"name": "ye",
 						"type": "Number",
-						"default": .5,
+						"default": 0.5,
 						"description": "a value from 0 to 1, (0 being the topmost side of the element/viewport and 1 being the bottommost side) that is matched up with the y value specified by <code>yr</code>"
 					},
 					{
 						"name": "yr",
 						"type": "Number",
-						"default": .5,
+						"default": 0.5,
 						"description": "a value from 0 to 1, (0 being the topmost side of the element/viewport and 1 being the bottommost side) that is matched up with the y value specified by <code>ye</code>"
 					},
 					{
