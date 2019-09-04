@@ -1,0 +1,46 @@
+doctype html
+html
+	head
+		meta(charset=`utf8`)
+		link(rel=`stylesheet` href=`/docs/build/style.css`)
+	body
+		for entity in docsData
+			div
+				-
+					let head = entity.name;
+					if (`parameters` in entity) {
+						head += `(`;
+						for (let [i, param] of entity.parameters.entries()) {
+							let paramEntry = `${i ? `, ` : ``}${param.name}`;
+							if (`default` in param) paramEntry = `[${paramEntry}]`;
+							head += paramEntry;
+						}
+						
+						head+= `)`;
+					}
+				h2: code= head
+				if `parameters` in entity
+					ol
+						mixin nameAndType(param)
+							code.param-name= param.name
+							| : 
+							code.param-type= param.type
+						for param in entity.parameters
+							li
+								+nameAndType(param)
+								if `parameters` in param
+									ol
+										for subParam in param.parameters
+											li
+												+nameAndType(subParam)
+											if `description` in subParam
+												p!= subParam.description
+							if `description` in param
+								p!= param.description
+				if `description` in entity
+					p!= entity.description
+				if `returns` in entity
+					p
+						span.returns Returns:
+						|  
+						!= entity.returns

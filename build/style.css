@@ -1,0 +1,26 @@
+body {
+	background: ivory;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+}
+
+ol {
+	list-style-type: none;
+}
+
+.param-name {
+	background: #ddd;
+	border-radius: 3px;
+}
+
+.param-type {
+	color: red;
+}
+
+p {
+	margin-top: .5rem;
+}
+
+.returns {
+	text-decoration: underline;
+}
