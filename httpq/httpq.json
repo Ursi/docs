@@ -40,7 +40,7 @@
 			{
 				"name": "reqFunc",
 				"type": "function",
-				"description": "a function that is passed the <code>http.ClientRequest</code> created by a call to <code>http(s).request(...params)",
+				"description": "a function that is passed the <code>http.ClientRequest</code> created by a call to <code>http(s).request(...params)"
 			},
 			{
 				"name": "...params",
