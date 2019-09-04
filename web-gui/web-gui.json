@@ -61,7 +61,7 @@
 					{
 						"name": "boxShadow",
 						"type": "String",
-						"default": "0 0 10px",
+						"default": "`0 0 10px`",
 						"description": "the value of the CSS <code>box-shadow</code> property of the popup"
 					},
 					{
