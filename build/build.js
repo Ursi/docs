@@ -9,6 +9,6 @@ process.chdir(path.join(__dirname, `..`));
 	`httpq`,
 ].forEach(docs => {
 	const docsData = JSON.parse(fs.readFileSync(path.join(docs, docs + `.json`)));
-	fs.writeFileSync(path.join(docs, `index.html`), pug.renderFile(path.join(`build`, `build.pug`), {docsData}));
+	fs.writeFileSync(path.join(docs, `index.html`), pug.renderFile(path.join(`build`, `build.pug`), {title: docs, docsData}));
 	console.log(docs);
 });
