@@ -3,6 +3,7 @@ html
 	head
 		meta(charset=`utf8`)
 		link(rel=`stylesheet` href=`/docs/build/style.css`)
+		title= title
 	body
 		for entity in docsData
 			div
@@ -18,7 +19,9 @@ html
 						
 						head+= `)`;
 					}
-				h2: code= head
+				h2(id=entity.name)
+					code= head
+					a.section-link(href=`#${entity.name}`) §
 				if `parameters` in entity
 					ol
 						mixin nameAndType(param)

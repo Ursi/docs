@@ -28,3 +28,14 @@ p {
 .default {
 	color: #0009;
 }
+
+.section-link {
+	text-decoration: none;
+	font-weight: normal;
+	color: #00000035;
+	font-size: .75em;
+}
+
+.section-link:hover {
+	color: black;
+}
