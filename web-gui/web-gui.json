@@ -68,25 +68,30 @@
 						"name": "zIndex",
 						"type": "Number",
 						"default": "Number.MAX_SAFE_INTEGER",
-						"description": "the value of the CSS <code>z-index</code> property"
+						"description": "the value of the CSS <code>z-index</code> property of the background element"
 					}
 				]
 			},
 			{
 				"name": "callback",
 				"type": "Function",
-				"default": null,
-				"description": "a callback to be executed when the popup is closed via clicking outside of it",
+				"default": "background => background.remove()",
+				"description": "a callback to be executed when clicking outside of the popup",
 				"parameters": [
 					{
-						"name": "elem",
+						"name": "this",
 						"type": "HTMLElement",
 						"description": "the <code>elem</code> parameter passed into <code>popup</code>"
 					},
 					{
-						"name": "options",
-						"type": "Object",
-						"description": "the <code>options</code> parameter passed into <code>popup</code>"
+						"name": "background",
+						"type": "HTMLElement",
+						"description": "The background element"
+					},
+					{
+						"name": "reference",
+						"type": "HTMLElement",
+						"description": "the value of <code>reference</code> options"
 					}
 				]
 			}
