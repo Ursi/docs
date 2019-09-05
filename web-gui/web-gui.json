@@ -17,7 +17,7 @@
 			{
 				"name": "elem",
 				"type": "HTMLElement",
-				"description": "The element that will be popped up"
+				"description": "the element that will be popped up"
 			},
 			{
 				"name": "options",
@@ -81,12 +81,12 @@
 					{
 						"name": "this",
 						"type": "HTMLElement",
-						"description": "the <code>elem</code> parameter passed into <code>popup</code>"
+						"description": "the <code>elem</code> parameter passed into <code>popup</code>\n(Removing this element will remove the background element as well.)"
 					},
 					{
 						"name": "background",
 						"type": "HTMLElement",
-						"description": "The background element"
+						"description": "the background element"
 					},
 					{
 						"name": "reference",
