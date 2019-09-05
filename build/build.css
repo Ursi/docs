@@ -39,3 +39,7 @@ p {
 .section-link:hover {
 	color: black;
 }
+
+* {
+	white-space: pre;
+}
