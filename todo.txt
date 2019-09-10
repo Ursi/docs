@@ -6,3 +6,4 @@ speedtest (might be pointless because of jsperf)
 httpq
 arrayx grammar
 httpq (http.post doesn't exist ?)
+web-gui (if I'm keeping loader)
