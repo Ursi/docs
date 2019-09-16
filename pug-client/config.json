@@ -13,5 +13,10 @@
 		"name": "options",
 		"type": "Object",
 		"description": "the default <a href='https://pugjs.org/api/reference.html#options'>options</a> for Pug's <code>compileClient</code> module."
+	},
+	{
+		"name": "module",
+		"type": "Boolean",
+		"description": "If true, the created script will export the function as a module."
 	}
 ]
