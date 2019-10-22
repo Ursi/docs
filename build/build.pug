@@ -27,7 +27,7 @@ mixin multivalue(types)
 	if Array.isArray(types)
 		for type in types.slice(0, -1)
 			code.js-value= type
-			| |
+			|  | 
 		code.js-value= types[types.length - 1]
 	else
 		code.js-value= types
