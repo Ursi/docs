@@ -5,10 +5,9 @@ const
 
 process.chdir(path.join(__dirname, `..`));
 [
-	`web-gui`,
-	`httpq`,
+	`pug-client`,
 ].forEach(docs => {
-	const docsData = JSON.parse(fs.readFileSync(path.join(docs, docs + `.json`)));
-	fs.writeFileSync(path.join(docs, `index.html`), pug.renderFile(path.join(`build`, `build.pug`), {title: docs, docsData}));
+	const docsData = require(path.join(`..`, docs, docs + `.json`));
+	fs.writeFileSync(path.join(docs, `index.html`), pug.renderFile(path.join(`build`, `build.pug`), docsData));
 	console.log(docs);
 });

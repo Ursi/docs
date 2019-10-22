@@ -1,51 +1,67 @@
-{
-	"entity": {
-		"prefix": "an object that is used to call the entity",
-		"name": "the name of the entitity",
-		"type": "the data type of the entitiy",
-		"parameters": [
+[
+	{
+		"name": "the name of the program",
+		"sections": [
 			{
-				"name": "the name of the parameter",
+				"name": "the name of the section",
+				"prefix": "a prefix to be applied to all the names of the entities",
+				"entities": []
+			}
+		]
+	},
+	{
+		"function": {
+			"type": "function",
+			"name": "the name of the function",
+			"parameters": [
+				{
+					"name": "the name of the parameter",
+					"type": "the data type of the parameter or an array of possible data types",
+					"grammar": {
+							"def": "something to show what metasyntax is being used",
+							"rules": "an array of [name, definition]"
+						},
+					"default": "the default value of the parameter",
+					"description": "a description of the parameter",
+					"parameters": "an array of parameters used to represent an options object with deafults or the parameters of a callback argument"
+				}
+			],
+			"description": "description of the entitiy",
+			"returns": {
 				"type": "the data type of the parameter or an array of possible data types",
-				"grammar": {
-						"def": "something to show what metasyntax is being used",
-						"rules": "an array of [name, definition]"
-					},
-				"default": "the default value of the parameter",
-				"description": "a description of the parameter",
-				"parameters": "an array of parameters used to represent an options object with deafults or the parameters of a callback argument"
-			}
-		],
-		"description": "description of the entitiy",
-		"returns": "the return value of the entitity if it returns",
-		"deprecated": "true or false/omitted"
-	},
-	"class": {
-		"name": "class name",
-		"extends": "class name of the class this class extends",
-		"constructor": "An entity for the constructor. Prefix and type can be omitted",
-		"instance": "An array of entities corresponding the properties of a class instance. Prefix can be omitted",
-		"static": "An array of entities corresponding to the static methods of the class. Prefix can be omitted"
-	},
-	"html element": {
-		"name": "name of the element",
-		"description": "description of the element",
-		"attributes": [
-			{
-				"name": "name of the attribute",
-				"boolean": "true or false/omitted",
-				"description": "description of the attribute",
-				"deprecated": "true or false/omitted"
-			}
-		],
-		"style": [
-			{
-				"selector": "CSS selector",
-				"declarations": [
-					["property", "value"]
-				]
-			}
-		],
-		"deprecated": "true or false/omitted"
+				"description": "a description of the return value"
+			},
+			"deprecated": "true or false/omitted"
+		},
+		"class": {
+			"type": "class",
+			"name": "class name",
+			"extends": "class name of the class this class extends",
+			"constructor": "An function for the constructor. Prefix and type can be omitted",
+			"instance": "An array of entities corresponding the properties of a class instance. Prefix can be omitted",
+			"static": "An array of entities corresponding to the static methods of the class. Prefix can be omitted"
+		},
+		"html element": {
+			"type": "html element",
+			"name": "name of the element",
+			"description": "description of the element",
+			"attributes": [
+				{
+					"name": "name of the attribute",
+					"boolean": "true or false/omitted",
+					"description": "description of the attribute",
+					"deprecated": "true or false/omitted"
+				}
+			],
+			"style": [
+				{
+					"selector": "CSS selector",
+					"declarations": [
+						["property", "value"]
+					]
+				}
+			],
+			"deprecated": "true or false/omitted"
+		}
 	}
-}
+]

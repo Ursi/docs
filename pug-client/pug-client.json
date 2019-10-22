@@ -1,0 +1,110 @@
+{
+	"name": "pug-client",
+	"sections": [
+		{
+			"name": "Exported",
+			"entities": [
+				{
+					"type": "function",
+					"name": "pugClient",
+					"parameters": [
+						{
+							"name": "pugs",
+							"type": "Array",
+							"description": "an array of pug objects with the properties above",
+							"parameters": [
+								{
+									"name": "name",
+									"type": "string",
+									"description": "the name that will be used to indentify this template"
+								},
+								{
+									"name": "pug",
+									"type": "string",
+									"description": "the Pug template string"
+								}
+							]
+						},
+						{
+							"name": "directory",
+							"type": "string",
+							"description": "the directory that will be set to the cwd when <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options'><code>pug.compileClient</code></a> is called"
+						},
+						{
+							"name": "options",
+							"type": "Object",
+							"parameters": [
+								{
+									"name": "pug",
+									"type": "string",
+									"description": "the name of the function",
+									"default": "`pug`"
+								},
+								{
+									"name": "module",
+									"type": "boolean",
+									"description": "whether or not the function will be built as an exportable ES module",
+									"default": false
+								},
+								{
+									"name": "options",
+									"type": "Object",
+									"default": null,
+									"description": "the <a href=''>options</a> used with <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options'><code>pug.compileClient</code></a>",
+									"parameters": [
+										{
+											"name": "filename",
+											"type": "string",
+											"default": "`Pug`"
+										},
+										{
+											"name": "doctype",
+											"type": "string",
+											"default": "`html`"
+										}
+									]
+								}
+							],
+							"default": null
+						}
+					],
+					"description": "takes an array of pug objects and returns a function that can use all of them on the client",
+					"returns": {
+						"type": "string",
+						"description": "a string of characters that, when evaluated, produces a function, named <code>pug</code> by default"
+					}
+				}
+			]
+		},
+		{
+			"name": "Created",
+			"entities": [
+				{
+					"type": "function",
+					"name": "pug",
+					"parameters": [
+						{
+							"name": "name",
+							"type": "string",
+							"description": "value of the pug object passed into <a href='#Exported-pugClient'>pugClient</a>"
+						},
+						{
+							"name": "locals",
+							"type": "boolean",
+							"description": "the <a href='https://pugjs.org/api/reference.html#pugcompilesource-options'><code>locals</code></a>"
+						},
+						{
+							"name": "string",
+							"type": "boolean",
+							"description": "return a string of HTML instead of a <code>DocumentFragment</code>"
+						}
+					],
+					"returns": {
+						"type": ["DocumentFragment", "string"],
+						"description": "a <code>DocumentFragment</code> containing the rendered Pug template or a <code>string</code> of the rendered Pug template"
+					}
+				}
+			]
+		}
+	]
+}

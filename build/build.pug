@@ -1,55 +1,75 @@
+mixin sidebar(sections)
+	#sidebar
+		ul
+			for section in sections
+				li
+					a.local-link.sidebar-section(href=(`#` + section.name))= section.name
+					ul
+						for entity in section.entities
+							li: a.local-link(href=(`#${section.name}-${entity.name}`)): code= entity.name
+mixin functionHeader(functionObj, sectionName)
+	-
+		head = functionObj.name + `(`;
+		for (let [i, param] of functionObj.parameters.entries()) {
+			let paramEntry = `${i ? `, ` : ``}${param.name}`;
+			if (`default` in param) paramEntry = `[${paramEntry}]`;
+			head += paramEntry;
+		}
+
+		head+= `)`;
+		id = sectionName + `-` + functionObj.name;
+	a.local-link(href=(`#` + id)): h3(id=id): code= head
+mixin defaultValue(param)
+	if ![null, undefined].includes(param.default)
+		span.default
+			| (default: #[code(class=`js-value`)= param.default])
+mixin multivalue(types)
+	if Array.isArray(types)
+		for type in types.slice(0, -1)
+			code.js-value= type
+			| |
+		code.js-value= types[types.length - 1]
+	else
+		code.js-value= types
+mixin parameters(parameters)
+	ol
+		for param in parameters
+			li.param
+				| #[code.param-name= param.name]: 
+				+multivalue(param.type)
+				| 
+				+defaultValue(param)
+				if `parameters` in param
+					+parameters(param.parameters)
+				if `description` in param
+					p!= param.description
+mixin returns(returnObj)
+	.return-container
+		span.returns Returns: 
+		+multivalue(returnObj.type)
+		p!= returnObj.description
+mixin main(sections)
+	for section in sections
+		div.section
+			h2(id=section.name)= section.name
+			ul.section-list
+				for entity in section.entities
+					li
+						case entity.type
+							when `function`
+								+functionHeader(entity, section.name)
+								+parameters(entity.parameters)
+								+returns(entity.returns)
 doctype html
 html
 	head
-		meta(charset=`utf8`)
-		link(rel=`stylesheet` href=`/docs/build/build.css`)
-		title= title
+		meta(charset=`utf-8`)
+		meta(name=`viewport` content=`width=device-width`)
+		link(rel=`stylesheet` href=`../build/build.css`)
+		title= name
 	body
-		for entity in docsData
-			div
-				-
-					let head = entity.name;
-					if (`parameters` in entity) {
-						head += `(`;
-						for (let [i, param] of entity.parameters.entries()) {
-							let paramEntry = `${i ? `, ` : ``}${param.name}`;
-							if (`default` in param) paramEntry = `[${paramEntry}]`;
-							head += paramEntry;
-						}
-						
-						head+= `)`;
-					}
-				h2(id=entity.name)
-					code= head
-					a.section-link(href=`#${entity.name}`) §
-				if `parameters` in entity
-					ol
-						mixin nameAndType(param)
-							code.param-name= param.name
-							| : 
-							code.js-value= param.type
-							|  
-							if `default` in param
-								-
-									let defaultValue = ``;
-									if (param.default) defaultValue = `(default: <code class='js-value'>${param.default}</code>)`;
-								span.default!= defaultValue
-						for param in entity.parameters
-							li
-								+nameAndType(param)
-								if `parameters` in param
-									ol
-										for subParam in param.parameters
-											li
-												+nameAndType(subParam)
-											if `description` in subParam
-												p!= subParam.description
-							if `description` in param
-								p!= param.description
-				if `description` in entity
-					p!= entity.description
-				if `returns` in entity
-					p
-						span.returns Returns:
-						|  
-						!= entity.returns
+		+sidebar(sections)
+		#main: div
+			h1= name
+			+main(sections)
+			#timestamp: date= new Date().toISOString()
