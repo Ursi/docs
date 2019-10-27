@@ -1,52 +1,144 @@
-[
-	{
-		"name": "get",
-		"type": "Function",
-		"description": "<code>httpq.get</code> takes in the same parameters as Node.js's <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_get_options_callback' target='_blank'><code>http.get</code></a>, however, it accepts both <code>http</code> and <code>https</code>",
-		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
-	},
-	{
-		"name": "getRaw",
-		"type": "Function",
-		"description": "same as <code>httpq.get</code> except the promise resolves to a <code>Buffer</code>",
-		"returns": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
-	},
-	{
-		"name": "http",
-		"type": "module",
-		"description": "Node.js's <code>http</code> module"
-	},
-	{
-		"name": "https",
-		"type": "module",
-		"description": "Node.js's <code>https</code> module"
-	},
-	{
-		"name": "post",
-		"type": "Function",
-		"description": "<code>httpq.post</code> takes in the same parameters as Node.js's <code>http.post</code>, however, it accepts both <code>http</code> and <code>https</code>",
-		"returns": "a promise that resolves to the body of the response encoded in <code>utf-8</code>"
-	},
-	{
-		"name": "postRaw",
-		"type": "Function",
-		"description": "same as <code>httpq.post</code> except the promise resolves to a <code>Buffer</code>",
-		"returns": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
-	},
-	{
-		"name": "request",
-		"type": "Function",
-		"parameters": [
-			{
-				"name": "reqFunc",
-				"type": "Function",
-				"description": "a function that is passed the <code>http.ClientRequest</code> created by a call to <code>http(s).request(...params)"
-			},
-			{
-				"name": "...params",
-				"description": "the parameters passed to <code>http(s).request</code>"
-			}
-		],
-		"returns": "a promise that resolves to a <code>Buffer</code> containing the body of the response"
-	}
-]
+{
+	"name": "httpq",
+	"sections": [
+		{
+			"name": "Exported",
+			"entities": [
+				{
+					"type": "function",
+					"name": "get",
+					"description": "<code>httpq.get</code> takes in the same arguments as <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_get_options_callback' target='_blank'><code>http.get</code></a> (minus the callback), however, it accepts both <code>http</code> and <code>https</code>",
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to the body of the response encoded in UTF-8"
+					}
+				},
+				{
+					"type": "function",
+					"name": "getRaw",
+					"description": "takes the same arguments as <a href='#Exported-get'><code>httpq.get</code></a>",
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
+					}
+				},
+				{
+					"type": "function",
+					"name": "getRes",
+					"description": "takes the same arguments as <a href='#Exported-get'><code>httpq.get</code></a>",
+					"returns": {
+						"type": "http.IncomingMessage",
+						"description": "the <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_class_http_incomingmessage' target='_blank'><code>http.IncomingMessage</code></a> passed into the callback of <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_request_options_callback' target='_blank'><code>http(s).request</code></a>"
+					}
+				},
+				{
+					"type": "function",
+					"name": "getToFile",
+					"parameters": [
+						{
+							"name": "path",
+							"type": "string",
+							"description": "the path of the file that will be written"
+						},
+						{
+							"name": "...args",
+							"description": "the arguments passed into <a href='#Exported-get'><code>httpq.get</code></a>"
+						}
+					],
+					"description": "performs a GET and write the response to a file",
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves when the data has finished being piped into the file"
+					}
+				},
+				{
+					"type": "function",
+					"name": "imData",
+					"parameters": [
+						{
+							"name": "im",
+							"type": "http.IncomingMessage"
+						}
+					],
+					"returns": {
+						"type": "Buffer",
+						"description": "a <code>Buffer</code> containing the data of <code>im</code>"
+					}
+				},
+				{
+					"type": "module",
+					"name": "http",
+					"description": "the <a href='https://nodejs.org/docs/latest-v12.x/api/http.html' target='_blank'><code>http</code></a> module"
+				},
+				{
+					"type": "module",
+					"name": "https",
+					"description": "the <a href='https://nodejs.org/docs/latest-v12.x/api/https.html' target='_blank'><code>https</code></a> module"
+				},
+				{
+					"type": "function",
+					"name": "post",
+					"parameters": [
+						{
+							"name": "body",
+							"type": "string",
+							"description": "the request body"
+						},
+						{
+							"name": "options",
+							"type": "Object",
+							"description": "the same options object accept by <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_request_options_callback' target='_blank'><code>http.request</code></a>"
+						},
+						{
+							"name": "encoding",
+							"type": "string",
+							"default": "`utf-8`",
+							"description": "the <code>encoding</code> parameter passed into <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_request_end_data_encoding_callback' target='_blank'><code>request.end</code></a>"
+						}
+					],
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to the body of the response encoded in UTF-8"
+					}
+				},
+				{
+					"type": "function",
+					"name": "postRaw",
+					"description": "takes the same arguments as <a href='#Exported-post'><code>httpq.post</code></a>",
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to a <code>Buffer</code> of the retrieved data."
+					}
+				},
+				{
+					"type": "function",
+					"name": "postRes",
+					"description": "takes the same arguments as <a href='#Exported-post'><code>httpq.post</code></a>",
+					"returns": {
+						"type": "http.IncomingMessage",
+						"description": "the <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_class_http_incomingmessage' target='_blank'><code>http.IncomingMessage</code></a> passed into the callback of <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_request_options_callback' target='_blank'><code>http(s).request</code></a>"
+					}
+				},
+				{
+					"type": "function",
+					"name": "request",
+					"parameters": [
+						{
+							"name": "reqFunc",
+							"type": "Function",
+							"description": "a function that is passed the <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_class_http_clientrequest' target='_blank'><code>http.ClientRequest</code></a> created by a call to <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_request_options_callback' target='_blank'><code>http(s).request(...args)</code></a>"
+						},
+						{
+							"name": "...args",
+							"description": "the arguments passed to <a href='https://nodejs.org/docs/latest-v12.x/api/http.html#http_http_request_options_callback' target='_blank'><code>http(s).request</code></a>"
+						}
+					],
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to a <code>Buffer</code> containing the body of the response"
+					}
+				}
+			]
+		}
+	]
+}
