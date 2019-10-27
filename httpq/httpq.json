@@ -66,12 +66,12 @@
 					}
 				},
 				{
-					"type": "module",
+					"type": "other",
 					"name": "http",
 					"description": "the <a href='https://nodejs.org/docs/latest-v12.x/api/http.html' target='_blank'><code>http</code></a> module"
 				},
 				{
-					"type": "module",
+					"type": "other",
 					"name": "https",
 					"description": "the <a href='https://nodejs.org/docs/latest-v12.x/api/https.html' target='_blank'><code>https</code></a> module"
 				},

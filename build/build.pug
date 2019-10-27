@@ -68,7 +68,7 @@ mixin main(sections)
 									+parameters(entity.parameters)
 								if entity.returns
 									+returns(entity.returns)
-							when `module`
+							when `other`
 								- const id = section.name + `-` + entity.name
 								a.local-link(href=(`#` + id)): h3(id=id)= entity.name
 								p!= entity.description
