@@ -1,0 +1,27 @@
+{
+	"name": "gulp-pug-client",
+	"sections": [
+		{
+			"name": "Exported",
+			"entities": [
+				{
+					"type": "function",
+					"name": "gulpPugClient",
+					"parameters": [
+						{
+							"name": "options",
+							"type": "Object",
+							"default": null,
+							"description": "the <code>options</code> argument used in <a href='/docs/pug-client/#Exported-pugClient' target='_blank'><code>pug-client</code></a>"
+						}
+					],
+					"description": "",
+					"returns": {
+						"type": "stream.Transform",
+						"description": "a transform stream in object mode whose output is a <a href='https://github.com/gulpjs/vinyl#readme' target='_blank'><code>Vinyl</code></a> containing the result of using <a href='/docs/pug-client/#Exported-pugClient' target='_blank'><code>pug-client</code></a> on the source globs"
+					}
+				}
+			]
+		}
+	]
+}
