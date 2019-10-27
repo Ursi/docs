@@ -97,3 +97,15 @@ code {
 	text-align: center;
 	font-size: .75rem;
 }
+
+.section-list > li {
+	margin: 3rem 0;
+}
+
+#sidebar a {
+	color: #000b;
+}
+
+#sidebar a:hover {
+	color: black;
+}

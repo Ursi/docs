@@ -10,10 +10,12 @@ mixin sidebar(sections)
 mixin functionHeader(functionObj, sectionName)
 	-
 		head = functionObj.name + `(`;
-		for (let [i, param] of functionObj.parameters.entries()) {
-			let paramEntry = `${i ? `, ` : ``}${param.name}`;
-			if (`default` in param) paramEntry = `[${paramEntry}]`;
-			head += paramEntry;
+		if (functionObj.parameters) {
+			for (let [i, param] of functionObj.parameters.entries()) {
+				let paramEntry = `${i ? `, ` : ``}${param.name}`;
+				if (`default` in param) paramEntry = `[${paramEntry}]`;
+				head += paramEntry;
+			}
 		}
 
 		head+= `)`;
@@ -35,8 +37,10 @@ mixin parameters(parameters)
 	ol
 		for param in parameters
 			li.param
-				| #[code.param-name= param.name]: 
-				+multivalue(param.type)
+				| #[code.param-name= param.name]
+				if param.type
+					| : 
+					+multivalue(param.type)
 				| 
 				+defaultValue(param)
 				if `parameters` in param
@@ -58,8 +62,16 @@ mixin main(sections)
 						case entity.type
 							when `function`
 								+functionHeader(entity, section.name)
-								+parameters(entity.parameters)
-								+returns(entity.returns)
+								if entity.description
+									p!= entity.description
+								if entity.parameters
+									+parameters(entity.parameters)
+								if entity.returns
+									+returns(entity.returns)
+							when `module`
+								- const id = section.name + `-` + entity.name
+								a.local-link(href=(`#` + id)): h3(id=id)= entity.name
+								p!= entity.description
 doctype html
 html
 	head
