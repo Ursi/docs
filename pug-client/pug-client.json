@@ -28,7 +28,7 @@
 						{
 							"name": "directory",
 							"type": "string",
-							"description": "the directory that will be set to the cwd when <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options'><code>pug.compileClient</code></a> is called"
+							"description": "the directory that will be set to the cwd when <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options' target='_blank'><code>pug.compileClient</code></a> is called"
 						},
 						{
 							"name": "options",
@@ -50,7 +50,7 @@
 									"name": "options",
 									"type": "Object",
 									"default": null,
-									"description": "the <a href=''>options</a> used with <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options'><code>pug.compileClient</code></a>",
+									"description": "the <a href='https://pugjs.org/api/reference.html#options' target='_blank'>options</a> used with <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options' target='_blank'><code>pug.compileClient</code></a>",
 									"parameters": [
 										{
 											"name": "filename",
@@ -91,7 +91,7 @@
 						{
 							"name": "locals",
 							"type": "boolean",
-							"description": "the <a href='https://pugjs.org/api/reference.html#pugcompilesource-options'><code>locals</code></a>"
+							"description": "the <a href='https://pugjs.org/api/reference.html#pugcompilesource-options' target='_blank'><code>locals</code></a>"
 						},
 						{
 							"name": "string",
