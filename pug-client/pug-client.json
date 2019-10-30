@@ -28,7 +28,7 @@
 						{
 							"name": "directory",
 							"type": "string",
-							"description": "the directory that will be set to the cwd when <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options' target='_blank'><code>pug.compileClient</code></a> is called"
+							"description": "The directory that will be set to the cwd when <a href='https://pugjs.org/api/reference.html#pugcompileclientsource-options' target='_blank'><code>pug.compileClient</code></a> is called. This effects how <a href='https://pugjs.org/language/includes.html' target='_blank'>includes</a> are interpreted."
 						},
 						{
 							"name": "options",
