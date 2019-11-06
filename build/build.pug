@@ -47,6 +47,8 @@ mixin parameters(parameters)
 					+parameters(param.parameters)
 				if `description` in param
 					p!= param.description
+				if `returns` in param
+					+returns(param.returns)
 mixin returns(returnObj)
 	.return-container
 		span.returns Returns: 
