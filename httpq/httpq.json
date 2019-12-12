@@ -24,6 +24,15 @@
 				},
 				{
 					"type": "function",
+					"name": "getJson",
+					"description": "takes the same arguments as <a href='#Exported-get'><code>httpq.get</code></a>",
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to an object that is the result of using <code>JSON.parse</code> on the retrieved data."
+					}
+				},
+				{
+					"type": "function",
 					"name": "getRes",
 					"description": "takes the same arguments as <a href='#Exported-get'><code>httpq.get</code></a>",
 					"returns": {
@@ -99,6 +108,15 @@
 					"returns": {
 						"type": "Promise",
 						"description": "a promise that resolves to the body of the response encoded in UTF-8"
+					}
+				},
+				{
+					"type": "function",
+					"name": "postJson",
+					"description": "takes the same arguments as <a href='#Exported-post'><code>httpq.post</code></a>",
+					"returns": {
+						"type": "Promise",
+						"description": "a promise that resolves to an object that is the result of using <code>JSON.parse</code> on the retrieved data."
 					}
 				},
 				{
